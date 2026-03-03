@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="櫻田 海斗のポートフォリオ。Go中心のバックエンド開発、設計・運用・パフォーマンスに関心。" />
+  <title>櫻田 海斗 | Portfolio</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">Kaito Sakurada</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="badge">Backend Engineer (Go) / System Design / Performance</p>
+          <h1>櫻田 海斗 <span class="sub">Kaito Sakurada</span></h1>
+          <p class="lead">
+            Goを中心に、サーバサイド設計・運用・パフォーマンス改善に興味があります。
+            実務と個人開発で「動くもの」だけでなく「壊れにくい設計」まで詰めます。
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="#projects">プロジェクトを見る</a>
+            <a class="btn ghost" href="#contact">連絡する</a>
+          </div>
+
+          <div class="links-row">
+            <a href="https://github.com/yingtian0" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://qiita.com/yingtian0" target="_blank" rel="noreferrer">Qiita</a>
+            <a href="#" target="_blank" rel="noreferrer">Resume(PDF)</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="card">
+            <h2>基本情報</h2>
+            <ul class="meta">
+              <li><span>所属</span> 山形大学 理学部 データサイエンスコース（3年）</li>
+              <li><span>出身</span> 宮城県登米市</li>
+              <li><span>関心</span> 大規模バックエンド設計 / 運用 / 最適化</li>
+            </ul>
+            <div class="mini-grid">
+              <div class="mini">
+                <div class="mini-num">Go</div>
+                <div class="mini-label">Backend</div>
+              </div>
+              <div class="mini">
+                <div class="mini-num">gRPC</div>
+                <div class="mini-label">API</div>
+              </div>
+              <div class="mini">
+                <div class="mini-num">AWS</div>
+                <div class="mini-label">Cloud</div>
+              </div>
+              <div class="mini">
+                <div class="mini-num">React</div>
+                <div class="mini-label">Frontend</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About</h2>
+        <div class="grid-2">
+          <div class="panel">
+            <h3>プロフィール</h3>
+            <p>
+              Goを中心としたバックエンド開発に取り組み、設計（Clean Architecture / DDD）、
+              運用、パフォーマンス観点を意識して実装しています。
+            </p>
+            <p>
+              「計測 → ボトルネック特定 → 改善」のサイクルを回すのが得意です。
+            </p>
+          </div>
+          <div class="panel">
+            <h3>強み</h3>
+            <ul class="bullets">
+              <li>実務: チケット駆動 / Git運用 / レビュー / 単体テスト追加</li>
+              <li>設計: 境界を切る、将来の変更コストを下げる</li>
+              <li>低レイヤ: ネットワーク/OS/SQLの基礎を踏まえた実装</li>
+              <li>成果物: 個人開発を複数リリースし検証している</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section alt">
+      <div class="container">
+        <h2>Experience</h2>
+
+        <div class="timeline">
+          <article class="item">
+            <div class="when">2025.08 -</div>
+            <div class="what">
+              <h3>株式会社オプティム / Backend Engineer（インターン・アルバイト）</h3>
+              <p class="muted">SaaS管理アプリ「サスマネ」</p>
+              <ul class="bullets">
+                <li>Go / OpenAPI / AWS Lambda を用いたバックエンド開発</li>
+                <li>チケット駆動開発、Git運用、コードレビュー、単体テスト追加</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="item">
+            <div class="when">2026.02 - 2026.03</div>
+            <div class="what">
+              <h3>株式会社サイバーエージェント / GO College</h3>
+              <ul class="bullets">
+                <li>Goによるサーバサイド開発の学習と応用</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="item">
+            <div class="when">-</div>
+            <div class="what">
+              <h3>セキュリティ脆弱性報告</h3>
+              <ul class="bullets">
+                <li>大学ポータルサイト WebClass に脆弱性を発見・報告</li>
+                <li>開発企業へ修正案提示 → 修正パッチリリース</li>
+                <li>日本データパシフィック社より感謝状、大学より表彰</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+
+        <div class="cards">
+          <article class="proj">
+            <div class="proj-head">
+              <h3>AppClass</h3>
+              <p class="muted">2024.09 - 2025.03</p>
+            </div>
+            <p>
+              学部学科ごとに複雑な履修要件を、ユーザー情報に合わせて表示・管理できるWebアプリ。
+              UI/UXを直感的に再設計。
+            </p>
+            <ul class="tags">
+              <li>Go</li><li>React(TypeScript)</li><li>MySQL</li><li>Clean Architecture</li><li>DDD</li>
+            </ul>
+            <div class="proj-links">
+              <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="#" target="_blank" rel="noreferrer">Demo</a>
+            </div>
+          </article>
+
+          <article class="proj">
+            <div class="proj-head">
+              <h3>MuchUp Project</h3>
+              <p class="muted">2025.06 -</p>
+            </div>
+            <p>
+              匿名でバランスよく6人を自動グループ化し、テキストチャットを提供するサービス。
+              リアルタイム通信と疎結合なサービス分割を意識。
+            </p>
+            <ul class="tags">
+              <li>Go</li><li>WebSocket</li><li>gRPC</li><li>Reverse Proxy</li><li>REST</li>
+            </ul>
+            <div class="proj-links">
+              <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="#" target="_blank" rel="noreferrer">Demo</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="hint">
+          ※ プロジェクトの「成果」を強くしたいなら、各カードに
+          <b>数値（例: レイテンシxx%改善 / テストxx本 / API数 / 同時接続）</b>
+          を必ず入れる。ないなら今から作りに行く。
+        </p>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h2>Skills</h2>
+
+        <div class="skill-grid">
+          <div class="panel">
+            <h3>Backend</h3>
+            <ul class="bullets">
+              <li>Go（REST / gRPC / Clean Architecture）</li>
+              <li>Python（API / ツール開発）</li>
+              <li>OpenAPI設計</li>
+              <li>WebSocketサーバ実装</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>Frontend</h3>
+            <ul class="bullets">
+              <li>React / Vite / Electron</li>
+              <li>Hooksによる状態管理</li>
+              <li>HTML / CSS 実装</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>Infra / Others</h3>
+            <ul class="bullets">
+              <li>AWS（Lambda / EC2 / S3）</li>
+              <li>Nginx / Proxy開発 / mitm proxy</li>
+              <li>Linux / Git / CI/CD</li>
+              <li>SQL / Network / OS の基礎</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="panel">
+          <p>
+            お仕事・インターンの相談、OSSや個人開発の協業など、お気軽に。
+          </p>
+          <div class="contact-row">
+            <a class="btn primary" href="haidouyingtian@example.com">メールする</a>
+            <a class="btn ghost" href="https://github.com/yingtian0" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn ghost" href="https://qiita.com/yingtian0" target="_blank" rel="noreferrer">Qiita</a>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <span>© <span id="y"></span> Kaito Sakurada</span>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
