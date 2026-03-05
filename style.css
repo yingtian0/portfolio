@@ -1,13 +1,13 @@
 :root{
-  --bg:#0b0f17;
-  --panel:#101827;
-  --panel2:#0f1624;
-  --text:#e6edf3;
-  --muted:#a7b0bb;
-  --line:#1f2a3a;
-  --accent:#6ee7ff;
-  --accent2:#a78bfa;
-  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --bg:#f6fbff;
+  --panel:#ffffff;
+  --panel2:#f3f8ff;
+  --text:#1f2a37;
+  --muted:#5e6c7d;
+  --line:#d8e3ef;
+  --accent:#0ea5e9;
+  --accent2:#f59e0b;
+  --shadow: 0 10px 28px rgba(13, 38, 76, .08);
   --radius: 16px;
 }
 
@@ -17,8 +17,8 @@ body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
   color:var(--text);
-  background: radial-gradient(1200px 600px at 20% 10%, rgba(110,231,255,.12), transparent),
-              radial-gradient(900px 500px at 80% 20%, rgba(167,139,250,.10), transparent),
+  background: radial-gradient(1200px 600px at 20% 10%, rgba(14,165,233,.14), transparent),
+              radial-gradient(900px 500px at 80% 20%, rgba(245,158,11,.11), transparent),
               var(--bg);
 }
 
@@ -34,9 +34,9 @@ a:hover{ opacity:.9; }
   position:sticky;
   top:0;
   z-index:50;
-  border-bottom:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid var(--line);
   backdrop-filter: blur(10px);
-  background: rgba(11,15,23,.6);
+  background: rgba(255,255,255,.84);
 }
 
 .header-inner{
@@ -58,7 +58,7 @@ a:hover{ opacity:.9; }
   color:var(--muted);
 }
 .nav a{ padding:8px 10px; border-radius:10px; }
-.nav a:hover{ background:rgba(255,255,255,.06); color:var(--text); }
+.nav a:hover{ background:var(--panel2); color:var(--text); }
 
 .hero{
   padding:64px 0 40px;
@@ -73,10 +73,10 @@ a:hover{ opacity:.9; }
 .badge{
   display:inline-block;
   padding:8px 12px;
-  border:1px solid rgba(110,231,255,.25);
+  border:1px solid rgba(14,165,233,.28);
   color:var(--accent);
   border-radius:999px;
-  background: rgba(110,231,255,.06);
+  background: rgba(14,165,233,.08);
   font-size:13px;
 }
 
@@ -112,18 +112,18 @@ h1 .sub{
   justify-content:center;
   padding:10px 14px;
   border-radius:12px;
-  border:1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.04);
+  border:1px solid var(--line);
+  background: var(--panel);
   color:var(--text);
   font-weight:650;
   font-size:14px;
 }
 .btn.primary{
-  border-color: rgba(110,231,255,.35);
-  background: linear-gradient(180deg, rgba(110,231,255,.18), rgba(110,231,255,.06));
+  border-color: rgba(14,165,233,.35);
+  background: linear-gradient(180deg, rgba(14,165,233,.24), rgba(14,165,233,.10));
 }
 .btn.ghost{
-  background: rgba(255,255,255,.03);
+  background: var(--panel2);
 }
 
 .links-row{
@@ -133,15 +133,15 @@ h1 .sub{
   font-size:14px;
 }
 .links-row a{
-  border-bottom:1px dashed rgba(255,255,255,.18);
+  border-bottom:1px dashed var(--line);
 }
 .links-row a:hover{ color:var(--text); }
 
 .hero-card .card,
 .panel,
 .proj{
-  border:1px solid rgba(255,255,255,.08);
-  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border:1px solid var(--line);
+  background: linear-gradient(180deg, #ffffff, #f8fbff);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
@@ -178,8 +178,8 @@ h1 .sub{
 .mini{
   padding:10px 12px;
   border-radius:14px;
-  border:1px solid rgba(255,255,255,.08);
-  background: rgba(16,24,39,.35);
+  border:1px solid var(--line);
+  background: var(--panel2);
 }
 .mini-num{
   font-weight:800;
@@ -201,9 +201,9 @@ h1 .sub{
   padding:54px 0;
 }
 .section.alt{
-  background: linear-gradient(180deg, rgba(255,255,255,.02), transparent);
-  border-top: 1px solid rgba(255,255,255,.06);
-  border-bottom: 1px solid rgba(255,255,255,.06);
+  background: linear-gradient(180deg, #f2f7ff, #f9fcff 58%, transparent);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
 .section h2{
@@ -247,8 +247,8 @@ h1 .sub{
   gap:16px;
   padding:16px;
   border-radius: var(--radius);
-  border:1px solid rgba(255,255,255,.08);
-  background: rgba(16,24,39,.25);
+  border:1px solid var(--line);
+  background: #ffffff;
 }
 .when{
   color:var(--muted);
@@ -293,8 +293,8 @@ h1 .sub{
 .tags li{
   padding:6px 10px;
   border-radius:999px;
-  border:1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.03);
+  border:1px solid var(--line);
+  background: #f3f8ff;
   font-size:12px;
   color:var(--text);
 }
@@ -314,8 +314,8 @@ h1 .sub{
 .section-image{
   width:100%;
   border-radius:12px;
-  border:1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.02);
+  border:1px solid var(--line);
+  background: #ffffff;
   display:block;
 }
 .section-image{
@@ -331,7 +331,7 @@ h1 .sub{
 .doc-links a{
   font-size:14px;
   color:var(--muted);
-  border-bottom:1px dashed rgba(255,255,255,.18);
+  border-bottom:1px dashed var(--line);
 }
 .doc-links a:hover{
   color:var(--text);
@@ -345,12 +345,12 @@ h1 .sub{
 .doc-embeds iframe{
   width:100%;
   min-height:320px;
-  border:1px solid rgba(255,255,255,.12);
+  border:1px solid var(--line);
   border-radius:12px;
-  background: rgba(255,255,255,.02);
+  background: #ffffff;
 }
 .proj-links a{
-  border-bottom:1px dashed rgba(255,255,255,.18);
+  border-bottom:1px dashed var(--line);
 }
 .hint{
   margin-top:14px;
