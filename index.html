@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="櫻田 海斗のポートフォリオ。Go中心のバックエンド開発、設計・運用・パフォーマンスに関心。" />
+  <meta name="description" content="櫻田 海斗の就活向けポートフォリオ。Goを軸にしたバックエンド開発、実務経験、性能改善、セキュリティ実績を短時間で把握できる構成。" />
   <title>櫻田 海斗 | Portfolio</title>
   <link rel="stylesheet" href="./style.css" />
 </head>
@@ -12,7 +12,8 @@
     <div class="container header-inner">
       <a class="brand" href="#top">Yingtian</a>
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
+        <a href="#summary">Summary</a>
+        <a href="#highlights">Highlights</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
@@ -22,20 +23,42 @@
   </header>
 
   <main id="top">
-    <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="summary">
       <div class="container hero-inner">
         <div class="hero-text">
-          <p class="badge">Backend Engineer (Go) / System Design / Performance</p>
+          <p class="badge">Go Backend / Performance / Security</p>
           <h1>櫻田 海斗 <span class="sub">Kaito Sakurada</span></h1>
           <p class="lead">
-            Goを中心に、サーバサイド設計・運用・パフォーマンス改善に興味があります。
-            実務と個人開発で動くものだけでなく壊れにくい設計まで詰めます。
+            山形大学 理学部 データサイエンスコース3年。Goを軸に、バックエンド実装だけでなく、
+            責務分割、API設計、性能改善、運用を含めて改善できる学生エンジニアです。
           </p>
 
+          <div class="summary-grid" aria-label="実績要約">
+            <article class="summary-card emphasis">
+              <span class="summary-label">実務経験</span>
+              <strong>OPTiMでAPI調査から設計、実装、テストまで担当</strong>
+              <p>外部SaaS API調査、OAS作成、API設計、Go実装、単体テスト、E2Eテストを一通り経験。</p>
+            </article>
+            <article class="summary-card">
+              <span class="summary-label">性能改善</span>
+              <strong>平均レイテンシ16%、p99 30%のAPI性能改善</strong>
+              <p>負荷試験とメトリクス計測を前提に、ボトルネックを特定してから改善しました。</p>
+            </article>
+            <article class="summary-card">
+              <span class="summary-label">セキュリティ</span>
+              <strong>大学ポータルの脆弱性を報告し修正リリースへ接続</strong>
+              <p>報告だけで終えず、修正案提示と証跡確認まで実施しました。</p>
+            </article>
+            <article class="summary-card">
+              <span class="summary-label">開発軸</span>
+              <strong>Goを中心に、設計と保守性を両立する実装</strong>
+              <p>Clean Architecture / DDDを使い分け、変更しやすい境界を意識します。</p>
+            </article>
+          </div>
+
           <div class="cta-row">
-            <a class="btn primary" href="#projects">プロジェクトを見る</a>
-            <a class="btn ghost" href="#contact">連絡する</a>
+            <a class="btn primary" href="#experience">実務と成果を見る</a>
+            <a class="btn ghost" href="#projects">実装事例を見る</a>
           </div>
 
           <div class="links-row">
@@ -44,101 +67,207 @@
           </div>
         </div>
 
-        <div class="hero-card">
+        <aside class="hero-card">
           <div class="card">
-            <h2>基本情報</h2>
+            <h2>採用向けサマリー</h2>
             <ul class="meta">
-              <li><span>所属</span> 山形大学 理学部 データサイエンスコース（3年）</li>
-              <li><span>出身</span> 宮城県登米市</li>
-              <li><span>関心</span> 大規模バックエンド設計 / 運用 / 最適化</li>
+              <li><span>所属</span> 山形大学 理学部 データサイエンスコース 3年</li>
+              <li><span>志向</span> Goを軸にしたバックエンドエンジニア</li>
+              <li><span>強み</span> 実装だけでなく性能改善と運用まで見られること</li>
+              <li><span>関心</span> 高負荷API、SaaS、保守しやすい設計</li>
             </ul>
             <div class="mini-grid">
               <div class="mini">
-                <div class="mini-num">Golang</div>
-                <div class="mini-label">Backend</div>
+                <div class="mini-num">Go</div>
+                <div class="mini-label">Backend Core</div>
               </div>
               <div class="mini">
-                <div class="mini-num">gRPC,REST</div>
-                <div class="mini-label">API</div>
+                <div class="mini-num">gRPC / REST</div>
+                <div class="mini-label">API Design</div>
               </div>
               <div class="mini">
-                <div class="mini-num">AWS,Database</div>
-                <div class="mini-label">Infra</div>
+                <div class="mini-num">Load Test</div>
+                <div class="mini-label">Performance</div>
               </div>
               <div class="mini">
-                <div class="mini-num">TypeScript</div>
-                <div class="mini-label">Frontend</div>
+                <div class="mini-num">AWS / MySQL</div>
+                <div class="mini-label">Operations</div>
               </div>
             </div>
+            <p class="note">数値実績は選考提出前に差し替えやすいよう、各セクションで更新しやすい文面にしています。</p>
           </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="highlights" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h2>Highlights</h2>
+            <p class="section-copy">短時間で判断しやすいよう、実績と技術的な強みを先にまとめています。</p>
+          </div>
+        </div>
+
+        <ol class="priority-list" aria-label="優先して見てほしい実績">
+          <li>OPTiMでのGoバックエンド実務経験</li>
+          <li>CyberAgent GO Collegeでの性能改善実績</li>
+          <li>WebClass脆弱性報告と修正反映実績</li>
+          <li>個人開発での設計判断と責務分割</li>
+        </ol>
+
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <p class="eyebrow">Internship / Part-time</p>
+            <h3>GoでAPI設計からテストまで一連のバックエンド開発を担当</h3>
+            <p>株式会社オプティムで、外部SaaS API調査、OAS作成、API設計、実装、単体テスト、E2Eテストまで担当。実装だけでなく、仕様整理から検証までつないで進めました。</p>
+            <!-- TODO: 担当チケット数や改善件数が確定したら追記 -->
+          </article>
+          <article class="highlight-card">
+            <p class="eyebrow">Performance</p>
+            <h3>計測を起点にAPI性能を改善し、平均レイテンシ16%・p99 30%改善</h3>
+            <p>負荷試験とメトリクス観測でボトルネックを特定し、改善後に平均レイテンシを16%、p99を30%改善。計測結果を根拠にチューニングを進めました。</p>
+          </article>
+          <article class="highlight-card">
+            <p class="eyebrow">Security</p>
+            <h3>脆弱性の発見から修正反映までつなげた実績</h3>
+            <p>大学ポータルWebClassの脆弱性を報告し、修正案提示後にリリースノートで反映を確認。感謝状と学内表彰あり。</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
+    <section id="about" class="section alt">
       <div class="container">
-        <h2>About</h2>
+        <div class="section-heading">
+          <div>
+            <h2>About</h2>
+            <p class="section-copy">何が得意かを広く並べるのではなく、どこに強いかが伝わるよう整理しています。</p>
+          </div>
+        </div>
         <div class="grid-2">
           <div class="panel">
-            <h3>プロフィール</h3>
+            <h3>志向する役割</h3>
             <p>
-              Goを中心としたバックエンド開発に取り組み、設計（Clean Architecture / DDD）、
-              運用、パフォーマンス観点を意識して実装しています。
+              Goを主軸に、バックエンドの責務分割、API設計、保守性を意識した実装に取り組んでいます。
+              動くものを作るだけでなく、変更しやすい構成と運用しやすさまで含めて設計するのが強みです。
             </p>
           </div>
           <div class="panel">
-            <h3>強み</h3>
+            <h3>採用側に伝えたい強み</h3>
             <ul class="bullets">
-              <li>実務: チケット駆動 / Git運用 / レビュー / 単体テスト追加</li>
-              <li>設計: 境界を切る、将来の変更コストを下げる</li>
-              <li>低レイヤ: ネットワーク/OS/SQLの基礎理解</li>
-              <li>成果物: 個人開発を複数リリースし検証している</li>
+              <li>実務でチケット駆動、レビュー、テスト追加を回しながら機能開発を進めた経験</li>
+              <li>負荷試験や計測をもとに、原因特定から改善までつなげる進め方</li>
+              <li>セキュリティ上の問題を見つけ、報告だけで終わらせず修正に接続した実績</li>
+              <li>個人開発でも責務分割や技術選定理由を説明できる形で設計していること</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section alt">
+    <section id="experience" class="section">
       <div class="container">
-        <h2>Experience</h2>
+        <div class="section-heading">
+          <div>
+            <h2>Experience</h2>
+            <p class="section-copy">「何をしたか」だけでなく、役割、技術判断、成果が分かる形で整理しています。</p>
+          </div>
+        </div>
 
         <div class="timeline">
           <article class="item">
             <div class="when">2025.08 - 2026.03</div>
             <div class="what">
-              <h3>株式会社オプティム / Backend Engineer（インターン・アルバイト）</h3>
-              <p class="muted">SaaS管理アプリ「サスマネ」</p>
-              <ul class="bullets">
-                <li>Go / AWS Lambda を用いたバックエンド開発</li>
-                <li>チケット駆動開発、Git運用、コードレビュー、単体テスト追加</li>
-              </ul>
+              <div class="item-head">
+                <div>
+                  <h3>株式会社オプティム / Backend Engineer</h3>
+                  <p class="muted">SaaS管理アプリ「サスマネ」 / インターン・アルバイト</p>
+                </div>
+                <ul class="chips">
+                  <li>Go</li>
+                  <li>AWS Lambda</li>
+                  <li>OAS</li>
+                  <li>E2E Test</li>
+                </ul>
+              </div>
+              <div class="detail-grid">
+                <div class="detail-block">
+                  <span class="detail-label">役割</span>
+                  <p>外部SaaS連携に関わるバックエンド開発を担当。API調査から仕様整理、設計、実装、テストまで一連の工程を担当しました。</p>
+                </div>
+                <div class="detail-block">
+                  <span class="detail-label">技術・判断</span>
+                  <p>外部SaaS APIを調査したうえでOASを作成し、API設計へ落とし込み。Go / AWS Lambda で実装し、仕様のズレを減らす進め方を重視しました。</p>
+                </div>
+                <div class="detail-block accent-block">
+                  <span class="detail-label">成果</span>
+                  <p>単体テストとE2Eテストまで含めて品質担保を担当。実装だけでなく、仕様化と検証を含めてチーム開発に参加した経験として説明できます。</p>
+                  <!-- TODO: 担当機能数、改善件数などを追加 -->
+                </div>
+              </div>
             </div>
           </article>
 
           <article class="item">
             <div class="when">2026.02 - 2026.03</div>
             <div class="what">
-              <h3>株式会社サイバーエージェント  GO College（インターン）</h3>
-              <ul class="bullets">
-                <li>Goによるサーバサイド開発の学習</li>
-                <li>APIの負荷試験を実施し、メトリクス計測を通じてボトルネックを特定</li>
-                <li>パフォーマンスチューニングを行いAPIの性能改善</li>
-              </ul>
+              <div class="item-head">
+                <div>
+                  <h3>株式会社サイバーエージェント / GO College</h3>
+                  <p class="muted">インターン</p>
+                </div>
+                <ul class="chips">
+                  <li>Go</li>
+                  <li>Load Test</li>
+                  <li>Metrics</li>
+                </ul>
+              </div>
+              <div class="detail-grid">
+                <div class="detail-block">
+                  <span class="detail-label">役割</span>
+                  <p>GoによるAPI開発課題に取り組み、性能改善テーマまで踏み込んで検証を実施。</p>
+                </div>
+                <div class="detail-block">
+                  <span class="detail-label">技術・判断</span>
+                  <p>負荷試験とメトリクス計測を使ってボトルネックを特定し、改善対象を切り分けてからチューニングを進行。</p>
+                </div>
+                <div class="detail-block accent-block">
+                  <span class="detail-label">成果</span>
+                  <p>改善後に平均レイテンシを16%、p99を30%改善。性能改善を感覚で進めず、観測結果を起点に進める開発スタイルを実践しました。</p>
+                </div>
+              </div>
             </div>
           </article>
+
           <article class="item">
             <div class="when">2025.07</div>
             <div class="what">
-              <h3>セキュリティ脆弱性報告</h3>
-              <ul class="bullets">
-                <li>大学ポータルサイト WebClass に脆弱性を発見・報告</li>
-                <li>開発企業へ修正案提示 → 修正パッチリリース</li>
-                <li>日本データパシフィック社より感謝状、大学より表彰</li>
-              </ul>
-              <p class="muted">証跡</p>
+              <div class="item-head">
+                <div>
+                  <h3>大学ポータル WebClass の脆弱性報告</h3>
+                  <p class="muted">個人での発見・報告</p>
+                </div>
+                <ul class="chips">
+                  <li>Security</li>
+                  <li>Reporting</li>
+                  <li>Verification</li>
+                </ul>
+              </div>
+              <div class="detail-grid">
+                <div class="detail-block">
+                  <span class="detail-label">役割</span>
+                  <p>脆弱性を発見し、影響と再現手順を整理して大学と開発企業へ報告。</p>
+                </div>
+                <div class="detail-block">
+                  <span class="detail-label">技術・判断</span>
+                  <p>問題点の指摘に留めず、修正案まで提示。修正後はリリースノートで反映を確認して証跡化。</p>
+                </div>
+                <div class="detail-block accent-block">
+                  <span class="detail-label">成果</span>
+                  <p>日本データパシフィック社より感謝状、大学から表彰。発見から是正までつなげた実績として説明可能。</p>
+                </div>
+              </div>
               <div class="doc-links">
                 <a href="./images/感謝状（写）.pdf" target="_blank" rel="noopener noreferrer">感謝状（写）PDF</a>
                 <a href="./images/webclass_v12.0.2_release-note.pdf" target="_blank" rel="noopener noreferrer">WebClass v12.0.2 リリースノート</a>
@@ -149,97 +278,162 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
+    <section id="projects" class="section alt">
       <div class="container">
-        <h2>Projects</h2>
+        <div class="section-heading">
+          <div>
+            <h2>Projects</h2>
+            <p class="section-copy">制作物の紹介ではなく、何をどう設計したかと、どこを見ると実力が分かるかを前に出しています。</p>
+          </div>
+        </div>
         <div class="cards">
           <article class="proj">
             <div class="proj-head">
-              <h3>AppClass</h3>
-              <p class="muted">2024.09 - 2025.03</p>
+              <div>
+                <h3>AppClass</h3>
+                <p class="muted">2024.09 - 2025.03</p>
+              </div>
+              <span class="status">Team Development</span>
             </div>
-            <p>
-              学部学科ごとに複雑な履修要件を、ユーザー情報に合わせて表示・管理できるWebアプリ。
-              UI/UXを直感的に再設計。
+            <p class="project-summary">
+              学部学科ごとに異なる履修要件を、ユーザー情報に応じて表示・管理できるWebアプリ。
+              複雑な条件分岐を扱いやすくするため、責務を分けて保守しやすい構成を意識しました。
             </p>
             <div class="project-images">
               <img src="./images/appclass1.png" alt="AppClass スクリーンショット 1" />
               <img src="./images/appclass2.png" alt="AppClass スクリーンショット 2" />
             </div>
+            <div class="project-detail-list">
+              <div class="project-detail">
+                <span class="detail-label">担当内容</span>
+                <p>Goバックエンド、Reactフロントエンド、要件に応じたデータ設計を横断して実装。</p>
+              </div>
+              <div class="project-detail">
+                <span class="detail-label">技術判断</span>
+                <p>履修要件の複雑な条件分岐を扱いやすくするため、Clean Architecture / DDD を取り入れ、ドメインロジックとUI都合を分離。</p>
+              </div>
+              <div class="project-detail accent-block">
+                <span class="detail-label">見どころ</span>
+                <p>履修判定ロジックが増えても破綻しにくい責務分割と、複雑な要件をユーザーが理解しやすい画面構成へ変換している点が見どころです。</p>
+              </div>
+            </div>
             <ul class="tags">
-              <li>Go</li><li>React(TypeScript)</li><li>MySQL</li><li>Clean Architecture</li><li>DDD</li>
+              <li>Go</li>
+              <li>React (TypeScript)</li>
+              <li>MySQL</li>
+              <li>Clean Architecture</li>
+              <li>DDD</li>
             </ul>
+            <div class="github-note">
+              <strong>GitHubで見てほしい点</strong>
+              <p><code>internal</code> を見てほしいです。履修要件のように複雑で変更が入りやすいロジックを、Clean Architecture を意識して分離しており、関心ごとをどこで切っているかが分かりやすい部分です。画面や入出力の都合に引っ張られず、業務ロジックを保守しやすい形で置こうとしている点を見ていただきたいです。</p>
+            </div>
             <div class="proj-links">
-              <a href="https://github.com/orgs/AppClass-organization/repositories" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://github.com/orgs/AppClass-organization/repositories" target="_blank" rel="noopener noreferrer">GitHub organization</a>
             </div>
           </article>
 
           <article class="proj">
             <div class="proj-head">
-              <h3>MuchUp Project</h3>
-              <p class="muted">2025.06 -</p>
+              <div>
+                <h3>MuchUp Project</h3>
+                <p class="muted">2025.06 -</p>
+              </div>
+              <span class="status">Personal / Team Oriented</span>
             </div>
-            <p>
-              匿名でバランスよく6人を自動グループ化し、テキストチャットを提供するサービス。
-              リアルタイム通信と疎結合なサービス分割を意識。
+            <p class="project-summary">
+              匿名で6人を自動グループ化し、テキストチャットを提供するサービス。
+              リアルタイム通信と将来の機能追加を見据え、疎結合なサービス分割を前提に設計しています。
             </p>
+            <div class="project-detail-list">
+              <div class="project-detail">
+                <span class="detail-label">担当内容</span>
+                <p>グルーピングロジック、チャット基盤、API設計、通信経路を含む全体アーキテクチャを設計・実装。</p>
+              </div>
+              <div class="project-detail">
+                <span class="detail-label">技術判断</span>
+                <p>WebSocket、gRPC、REST、Reverse Proxy を役割ごとに分け、リアルタイム通信と同期APIの責務を混ぜない構成を採用。</p>
+              </div>
+              <div class="project-detail accent-block">
+                <span class="detail-label">見どころ</span>
+                <p>匿名グルーピングとチャットを両立するために、マッチング、常時接続、API連携の境界を分けている点が見どころです。</p>
+              </div>
+            </div>
             <ul class="tags">
-              <li>Go</li><li>WebSocket</li><li>gRPC</li><li>Reverse Proxy</li><li>REST</li>
+              <li>Go</li>
+              <li>WebSocket</li>
+              <li>gRPC</li>
+              <li>Reverse Proxy</li>
+              <li>REST</li>
             </ul>
+            <div class="github-note">
+              <strong>GitHubで見てほしい点</strong>
+              <p><a href="https://github.com/MuchUp-project/MuchUp-api-service" target="_blank" rel="noopener noreferrer">MuchUp-api-service</a> を見てほしいです。APIの契約を曖昧にしないためにスキーマ重視で設計し、そのうえで WebSocket と gRPC を役割に応じて使い分けています。リアルタイム通信とサービス間連携を同時に扱う中で、責務を混ぜずに設計している点が、このプロジェクトで特に見てほしい実装です。</p>
+            </div>
             <div class="proj-links">
-              <a href="https://github.com/orgs/MuchUp-project/repositories" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://github.com/orgs/MuchUp-project/repositories" target="_blank" rel="noopener noreferrer">GitHub organization</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="section alt">
+    <section id="skills" class="section">
       <div class="container">
-        <h2>Skills</h2>
+        <div class="section-heading">
+          <div>
+            <h2>Skills</h2>
+            <p class="section-copy">技術の幅よりも、採用時に見てほしい軸が伝わるよう3カテゴリに整理しています。</p>
+          </div>
+        </div>
         <div class="skill-grid">
           <div class="panel">
             <h3>Backend</h3>
+            <p class="panel-note">最も強い軸です。Goを中心にAPI設計と責務分割を伴う実装を行います。</p>
             <ul class="bullets">
-              <li>Go（REST / gRPC / Clean Architecture）</li>
-              <li>Python（API / ツール開発）</li>
-              <li>OpenAPI設計</li>
-              <li>WebSocketサーバ実装</li>
+              <li>Go（REST / gRPC / WebSocket / Clean Architecture）</li>
+              <li>OpenAPIを意識したAPI設計</li>
+              <li>MySQLを前提にしたデータ設計・実装</li>
+              <li>Pythonによる補助ツール・API開発</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>Infrastructure / Performance</h3>
+            <p class="panel-note">実装したものを動かし続ける観点と、性能課題を計測から詰める観点があります。</p>
+            <ul class="bullets">
+              <li>AWS / AWS Lambda</li>
+              <li>Linux / Git / CI/CD</li>
+              <li>API負荷試験、メトリクス計測、性能チューニング</li>
+              <li>Nginx / Reverse Proxy / mitmproxy</li>
             </ul>
           </div>
 
           <div class="panel">
             <h3>Frontend</h3>
+            <p class="panel-note">主軸はバックエンドですが、フロントまでつないでユーザー体験を整える実装ができます。</p>
             <ul class="bullets">
-              <li>React / Vite / Electron</li>
-              <li>Hooksによる状態管理</li>
-              <li>HTML / CSS</li>
-            </ul>
-          </div>
-
-          <div class="panel">
-            <h3>Infra / Others</h3>
-            <ul class="bullets">
-              <li>AWS</li>
-              <li>Nginx  / mitm proxy</li>
-              <li>Linux / Git / CI/CD</li>
-              <li>API負荷試験</li>
-              <li>パフォーマンスチューニング</li>
-              <li>AI Agent Skills作成</li>
-              <li>アルゴリズム / Network / OS の基礎</li>
+              <li>React / TypeScript / Vite / Electron</li>
+              <li>状態管理と画面設計を含むUI実装</li>
+              <li>HTML / CSS によるレスポンシブ対応</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section alt">
       <div class="container">
-        <h2>Contact</h2>
+        <div class="section-heading">
+          <div>
+            <h2>Contact</h2>
+            <p class="section-copy">就職活動に関連する面談、インターン、本選考のご連絡を想定しています。</p>
+          </div>
+        </div>
         <div class="panel">
           <p>
-            お仕事・インターンの相談、OSSや個人開発の協業など、お気軽に。
+            バックエンドエンジニア職を中心に、インターン・本選考のご連絡を歓迎しています。
+            GitHubで見てほしい実装ポイントも上に整理しているので、確認のうえでご連絡いただけるとスムーズです。
           </p>
           <div class="contact-row">
             <a class="btn primary" href="mailto:haidouyingtian@example.com">メールする</a>
