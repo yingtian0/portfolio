@@ -45,6 +45,14 @@
               <strong>大学ポータルの脆弱性を報告し修正リリースへ接続</strong>
             </article>
             <article class="summary-card">
+              <span class="summary-label">チーム開発</span>
+              <strong>個人開発をチーム開発プロジェクトへ移行</strong>
+              <p>
+                MuchUp Projectでは、Issue管理、PRレビュー、ADR、機能要件定義を整備し、
+                メンバーが主体的に課題発見・実装できる開発体制づくりに取り組んでいます。
+              </p>
+            </article>
+            <article class="summary-card">
               <span class="summary-label">開発軸</span>
               <strong>Goを中心に、設計と保守性を両立する実装</strong>
               <p>DDDを意識し、変更しやすい境界設計を意識しています。</p>
@@ -116,12 +124,14 @@
               <li>負荷試験や計測をもとに、原因特定から改善までつなげる進め方</li>
               <li>セキュリティ上の問題を見つけ、報告だけで終わらせず修正に接続した実績</li>
               <li>個人開発でも責務分割や技術選定理由を説明できる形で設計していること</li>
+              <li>個人開発をチーム開発へ移行し、Issue管理、PRレビュー、ADR、定例会を通じて、メンバーが主体的に開発できる仕組みを作った経験</li>
+              <li>未知領域のタスクに対して、ゴール・完了条件・不明点・選択肢・トレードオフを整理して進める開発プロセスを設計した経験</li>
             </ul>
           </div>
-           <div class="panel">
+          <div class="panel">
             <h3>将来像</h3>
-              <p>
-ソフトウェアエンジニアという立場から事業作りに関わり、ユーザー価値と事業成果の両方に貢献できるエンジニアを目指しています。
+            <p>
+              ソフトウェアエンジニアという立場から事業作りに関わり、ユーザー価値と事業成果の両方に貢献できるエンジニアを目指しています。
             </p>
           </div>
         </div>
@@ -304,23 +314,66 @@
             <div class="proj-head">
               <div>
                 <h3>MuchUp Project</h3>
-                <p class="muted">2025.06 -</p>
+                <p class="muted">2025.06 - 現在</p>
               </div>
             </div>
+
             <p class="project-summary">
-              匿名で6人を自動グループ化し、テキストチャットを提供するサービス。
-              リアルタイム通信と将来の機能追加を見据え、疎結合なサービス分割を前提に設計しています。
+              匿名ユーザーを自動グループ化し、リアルタイムチャットを提供するサービスです。
+              WebSocket / gRPC / REST / Redis を使い分け、リアルタイム通信、サービス間通信、
+              状態管理、イベント履歴を分離して設計しています。
+              現在は個人開発からチーム開発プロジェクトへ移行し、Issue管理、PRレビュー、
+              ADR、機能要件定義、entity / proto定義の見直しを進めています。
             </p>
+
             <ul class="tags">
               <li>Go</li>
               <li>WebSocket</li>
               <li>gRPC</li>
-              <li>Reverse Proxy</li>
+              <li>Protocol Buffers</li>
+              <li>Redis</li>
               <li>REST</li>
+              <li>Docker</li>
+              <li>ADR</li>
+              <li>Team Development</li>
             </ul>
+
             <div class="github-note">
               <strong>GitHubで見てほしい点</strong>
-              <p>各サービスの間で相違を無くすためにスキーマ重視で設計、リアルタイムチャットを複数ゴルーチンで実現している点がこのプロジェクトで特に見てほしい実装です。</p>
+              <p>
+                通信方式ごとの責務分離、Redisを用いた状態管理、protoによるサービス間契約、
+                そして個人開発をチーム開発へ移行するためのIssue / PR / ADR運用を見てほしいです。
+                直近では、ChatGroupという曖昧な概念をRoom / RoomMember / MatchingTicket / UserProfile / Messageへ分解し、
+                ドメイン上の責務を明確にするリファクタリングに取り組んでいます。
+              </p>
+            </div>
+
+            <div class="detail-grid">
+              <div class="detail-block">
+                <span class="detail-label">設計判断</span>
+                <p>
+                  クライアントとのリアルタイム通信にはWebSocket、サービス間通信にはgRPC、
+                  外部向けAPIにはRESTを使用しています。
+                  最新状態はRedis、永続化が必要な情報はDB、履歴性や再処理が必要なイベントはRedis Streamsで扱う方針です。
+                </p>
+              </div>
+
+              <div class="detail-block">
+                <span class="detail-label">チーム開発</span>
+                <p>
+                  個人開発だったプロジェクトをチーム開発化し、定例会、Issue管理、PRレビュー、
+                  コミットルール、PRテンプレートを整備しました。
+                  メンバーが主体的に課題を発見し、Issue化し、レビューを受けながら実装できる仕組みづくりを行っています。
+                </p>
+              </div>
+
+              <div class="detail-block accent-block">
+                <span class="detail-label">現在の取り組み</span>
+                <p>
+                  機能要件定義、entity設計、proto定義の見直し、ADR作成を進めています。
+                  未知領域のタスクでは、ゴール、完了条件、不明点、選択肢、トレードオフを整理してから実装に入る進め方をチームで運用しています。
+                </p>
+              </div>
             </div>
             <div class="proj-links">
               <a href="https://github.com/yingtian0/MuchUp-project" target="_blank" rel="noopener noreferrer">GitHub repo</a>
@@ -342,8 +395,10 @@
             <h3>Backend</h3>
             <ul class="bullets">
               <li>Go（REST / gRPC / WebSocket / Clean Architecture）</li>
-              <li>OpenAPIを意識したAPI設計</li>
-              <li>データベース設計,ORMでの機能実装</li>
+              <li>OpenAPI / Protocol Buffers を用いたAPI設計</li>
+              <li>Redisを用いた状態管理、Pub/Sub、Streams設計</li>
+              <li>データベース設計、ORMを用いた機能実装</li>
+              <li>DDDを意識したentity設計、責務分離、ADR作成</li>
               <li>Pythonによる補助ツール・API開発</li>
             </ul>
           </div>
@@ -382,7 +437,7 @@
             バックエンドエンジニア職を中心に、インターン・本選考のご連絡を歓迎しています。
           </p>
           <div class="contact-row">
-            <a class="btn primary" href="mailto:haidouyingtian@example.com">メールする</a>
+            <a class="btn primary" href="mailto:haidouyingtian@gmail.com">メールする</a>
             <a class="btn ghost" href="https://github.com/yingtian0" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a class="btn ghost" href="https://qiita.com/yingtian0" target="_blank" rel="noopener noreferrer">Qiita</a>
           </div>
