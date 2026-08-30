@@ -26,24 +26,32 @@
     <section class="hero" id="summary">
       <div class="container hero-inner">
         <div class="hero-text">
-          <p class="badge">Go Backend / Performance / Security</p>
+          <p class="badge">Go Backend / AWS &amp; IaC / Performance</p>
           <h1>櫻田 海斗 <span class="sub">Kaito Sakurada</span></h1>
           <p class="lead">
-            山形大学 理学部 データサイエンスコース3年。Goを軸に、
-            API設計・責務分割・性能改善・運用性を意識したバックエンド開発に取り組んでいます。
+            山形大学 理学部 データサイエンスコース3年。Goを軸にしたAPI設計・責務分割・性能改善に加え、
+            TerraformによるAWS構築とCI/CDの整備まで、動かした後まで面倒を見られるバックエンド開発に取り組んでいます。
           </p>
 
           <div class="summary-grid" aria-label="実績要約">
             <article class="summary-card emphasis">
+              <span class="summary-label">受賞</span>
+              <strong>LayerXハッカソンで VPoE賞 を受賞</strong>
+              <p>AI Agent開発をテーマにしたハッカソンに個人参加し、VPoE賞を頂きました。</p>
+            </article>
+
+            <article class="summary-card">
               <span class="summary-label">実務経験</span>
               <strong>BtoB SaaS開発で設計、実装、テストまで担当</strong>
               <p>外部サービス連携を含むバックエンド開発において、仕様整理、API設計、Go実装、テストを一通り経験。</p>
             </article>
 
             <article class="summary-card">
-              <span class="summary-label">セキュリティ</span>
-              <strong>大学ポータルの脆弱性を報告し修正リリースへ接続</strong>
+              <span class="summary-label">インフラ / 運用</span>
+              <strong>TerraformでAWSを構築し、CI/CDを整備</strong>
+              <p>実行基盤の技術選定からTerraformによるIaC化、OIDC認証によるデプロイの自動化までを担当。</p>
             </article>
+
             <article class="summary-card">
               <span class="summary-label">チーム開発</span>
               <strong>個人開発をチーム開発プロジェクトへ移行</strong>
@@ -51,11 +59,6 @@
                 MuchUp Projectでは、Issue管理、PRレビュー、ADR、機能要件定義を整備し、
                 メンバーが主体的に課題発見・実装できる開発体制づくりに取り組んでいます。
               </p>
-            </article>
-            <article class="summary-card">
-              <span class="summary-label">開発軸</span>
-              <strong>Goを中心に、設計と保守性を両立する実装</strong>
-              <p>DDDを意識し、変更しやすい境界設計を意識しています。</p>
             </article>
           </div>
 
@@ -76,7 +79,7 @@
             <ul class="meta">
               <li><span>所属</span> 山形大学 理学部 データサイエンスコース 3年</li>
               <li><span>志向</span> Goを軸にしたバックエンドエンジニア</li>
-              <li><span>強み</span> 実装だけでなく性能改善と運用まで見られること</li>
+              <li><span>強み</span> 実装から性能改善、IaCとCI/CDによる運用整備まで見られること</li>
               <li><span>関心</span> 大規模バックエンド運用,保守しやすい設計</li>
             </ul>
             <div class="mini-grid">
@@ -96,9 +99,53 @@
                 <div class="mini-num">AWS / MySQL</div>
                 <div class="mini-label">Operations</div>
               </div>
+              <div class="mini">
+                <div class="mini-num">Terraform</div>
+                <div class="mini-label">IaC</div>
+              </div>
+              <div class="mini">
+                <div class="mini-num">CI/CD</div>
+                <div class="mini-label">Delivery</div>
+              </div>
             </div>
           </div>
         </aside>
+      </div>
+    </section>
+    <section id="highlights" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h2>Highlights</h2>
+            <p class="section-copy">外部からの評価と、直近の取り組みで特に成果につながったものです。</p>
+          </div>
+        </div>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <span class="eyebrow">Award</span>
+            <h3>LayerXハッカソン VPoE賞</h3>
+            <p>
+              株式会社LayerX主催のAI Agent開発ハッカソン（2026.08）に個人参加し、
+              LayerX本社でのデモデイでの発表を経てVPoE賞を受賞しました。
+            </p>
+          </article>
+          <article class="highlight-card">
+            <span class="eyebrow">Security</span>
+            <h3>脆弱性報告を修正リリースへ接続</h3>
+            <p>
+              大学ポータルWebClassの脆弱性を発見し、影響と再現手順を整理して報告。
+              修正案の提出から修正パッチのリリースまでつなげ、開発企業より感謝状、大学より表彰を頂きました。
+            </p>
+          </article>
+          <article class="highlight-card">
+            <span class="eyebrow">Infrastructure</span>
+            <h3>AWSのIaC化とデプロイ自動化</h3>
+            <p>
+              サマーインターンで、ECS Fargate・Aurora Serverless v2などの実行基盤をTerraformでコード化し、
+              GitHub ActionsのOIDC認証によるビルド・デプロイの自動化まで整備しました。
+            </p>
+          </article>
+        </div>
       </div>
     </section>
     <section id="about" class="section alt">
@@ -126,6 +173,8 @@
               <li>個人開発でも責務分割や技術選定理由を説明できる形で設計していること</li>
               <li>個人開発をチーム開発へ移行し、Issue管理、PRレビュー、ADR、定例会を通じて、メンバーが主体的に開発できる仕組みを作った経験</li>
               <li>未知領域のタスクに対して、ゴール・完了条件・不明点・選択肢・トレードオフを整理して進める開発プロセスを設計した経験</li>
+              <li>TerraformでAWSリソースをコード化し、OIDC認証によるCI/CDパイプラインまで整備した経験</li>
+              <li>アプリケーションだけでなく実行基盤の技術選定も担当し、採用理由と却下理由をADRとして残した経験</li>
             </ul>
           </div>
           <div class="panel">
@@ -147,6 +196,126 @@
         </div>
 
         <div class="timeline">
+          <article class="item">
+            <div class="when">2026.08.24 - 2026.08.29</div>
+            <div class="what">
+              <div class="item-head">
+                <div>
+                  <h3>株式会社Finatext / バックエンド・インフラ</h3>
+                  <p class="muted">サマーインターン / 3人チーム</p>
+                </div>
+                <ul class="chips">
+                  <li>Go</li>
+                  <li>AWS</li>
+                  <li>Terraform</li>
+                  <li>CI/CD</li>
+                </ul>
+              </div>
+              <div class="detail-grid">
+                <div class="detail-block">
+                  <span class="detail-label">役割</span>
+                  <p>株式の注文受付サーバと注文情報DBをAWS上に構築する課題に取り組み、API実装に加えて実行基盤の技術選定、TerraformによるIaC、デプロイパイプラインの整備を担当しました。</p>
+                </div>
+                <div class="detail-block">
+                  <span class="detail-label">技術・判断</span>
+                  <p>与えられた制約と市場開始時のスパイクを前提に候補を比較し、ECS Fargate、Aurora MySQL Serverless v2、ALBを採用。採用理由だけでなく却下理由もADRとして残しました。</p>
+                </div>
+                <div class="detail-block accent-block">
+                  <span class="detail-label">成果</span>
+                  <p>手作業だったデプロイを、OIDC認証によるGitHub Actionsのパイプラインへ置き換え、インフラをコードで再現できる状態にしました。</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item">
+            <div class="when">2026.08.17 - 2026.08.22</div>
+            <div class="what">
+              <div class="item-head">
+                <div>
+                  <h3>株式会社SmartHR / エンジニア</h3>
+                  <p class="muted">サマーインターン / チーム開発</p>
+                </div>
+                <ul class="chips">
+                  <li>Ruby on Rails</li>
+                  <li>Multi-tenant SaaS</li>
+                  <li>Team Development</li>
+                </ul>
+              </div>
+              <div class="detail-grid">
+                <div class="detail-block">
+                  <span class="detail-label">役割</span>
+                  <p>クライアントへのヒアリングをもとに課題を定義し、それを解決するマルチテナントSaaSをチームで開発しました。要件整理から実装まで、担当を固定せず全般に関わりました。</p>
+                </div>
+                <div class="detail-block">
+                  <span class="detail-label">技術・判断</span>
+                  <p>Ruby on Railsで実装。複数テナントが同じ基盤を共有する前提で、データの分離と機能の作り方を検討しながら開発を進めました。</p>
+                </div>
+                <div class="detail-block accent-block">
+                  <span class="detail-label">成果</span>
+                  <p>ヒアリングで得た課題を機能へ落とし込む過程を経験し、短期間でチームとして動く形まで作り切りました。</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item">
+            <div class="when">2026.08.08 - 2026.08.09</div>
+            <div class="what">
+              <div class="item-head">
+                <div>
+                  <h3>LayerXハッカソン / 個人参加</h3>
+                  <p class="muted">株式会社LayerX主催 ハッカソン</p>
+                </div>
+                <ul class="chips">
+                  <li>AI Agent</li>
+                  <li>Hackathon</li>
+                </ul>
+              </div>
+              <div class="detail-grid">
+                <div class="detail-block">
+                  <span class="detail-label">内容</span>
+                  <p>「AI Agent開発ハッカソンでLayerXの爆速開発を体感」をテーマとした学生向けハッカソンに個人で参加し、LayerX本社でのデモデイで成果を発表しました。</p>
+                </div>
+                <div class="detail-block accent-block">
+                  <span class="detail-label">成果</span>
+                  <p>VPoE賞を受賞しました。</p>
+                </div>
+              </div>
+              <div class="doc-links">
+                <a href="https://www.craftstadium.com/hackathon/layerx-hackathon-202608" target="_blank" rel="noopener noreferrer">Event page</a>
+              </div>
+            </div>
+          </article>
+          <article class="item">
+            <div class="when">2026.07.28 - 2026.08.07</div>
+            <div class="what">
+              <div class="item-head">
+                <div>
+                  <h3>株式会社OPTiM / バックエンドエンジニア</h3>
+                  <p class="muted">OPTiM Biz / サマーインターン</p>
+                </div>
+                <ul class="chips">
+                  <li>Backend</li>
+                  <li>Batch</li>
+                  <li>大量データ</li>
+                  <li>Debugging</li>
+                </ul>
+              </div>
+              <div class="detail-grid">
+                <div class="detail-block">
+                  <span class="detail-label">役割</span>
+                  <p>OPTiM Bizにおいて、大量に蓄積された不要データを削除するバッチ処理の開発と、既存の不具合の原因特定を担当しました。</p>
+                </div>
+                <div class="detail-block">
+                  <span class="detail-label">技術・判断</span>
+                  <p>削除対象の条件を仕様とデータの実態の両面から確認し、稼働中のサービスへの影響を抑える形で処理を設計しました。不具合については再現条件を絞り込みながら原因を特定しました。</p>
+                </div>
+                <div class="detail-block accent-block">
+                  <span class="detail-label">成果</span>
+                  <p>機能追加だけでなく、運用に伴って積み上がるデータの整理と、既存コードの調査という、稼働中プロダクトを支える側の開発を経験しました。</p>
+                </div>
+              </div>
+            </div>
+          </article>
           <article class="item">
             <div class="when">2026.05.24 - 2026.05.26</div>
             <div class="what">
@@ -183,6 +352,32 @@
             </div>
           </article>
           <article class="item">
+            <div class="when">2026.02 - 2026.03</div>
+            <div class="what">
+              <div class="item-head">
+                <div>
+                  <h3>株式会社サイバーエージェント / GO College</h3>
+                  <p class="muted">インターン</p>
+                </div>
+                <ul class="chips">
+                  <li>Go</li>
+                  <li>Load Test</li>
+                  <li>Metrics</li>
+                </ul>
+              </div>
+              <div class="detail-grid">
+                <div class="detail-block">
+                  <span class="detail-label">内容</span>
+                  <p>Goによるサーバサイド開発の学習、API開発実践。</p>
+                </div>
+                <div class="detail-block accent-block">
+                  <span class="detail-label">成果</span>
+                  <p>改善後に平均レイテンシを16%、p99を30%改善。計測結果から仮説検証を行いました。</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item">
             <div class="when">2025.09 - 2026.03</div>
             <div class="what">
               <div class="item-head">
@@ -214,32 +409,6 @@
             </div>
           </article>
           <article class="item">
-            <div class="when">2026.02 - 2026.03</div>
-            <div class="what">
-              <div class="item-head">
-                <div>
-                  <h3>株式会社サイバーエージェント / GO College</h3>
-                  <p class="muted">インターン</p>
-                </div>
-                <ul class="chips">
-                  <li>Go</li>
-                  <li>Load Test</li>
-                  <li>Metrics</li>
-                </ul>
-              </div>
-              <div class="detail-grid">
-                <div class="detail-block">
-                  <span class="detail-label">内容</span>
-                  <p>Goによるサーバサイド開発の学習、API開発実践。</p>
-                </div>
-                <div class="detail-block accent-block">
-                  <span class="detail-label">成果</span>
-                  <p>改善後に平均レイテンシを16%、p99を30%改善。計測結果から仮説検証を行いました。</p>
-                </div>
-              </div>
-            </div>
-          </article>
-           <article class="item">
             <div class="when">2025.08.18 - 2025.08.29</div>
             <div class="what">
               <div class="item-head">
@@ -315,6 +484,135 @@
           </div>
         </div>
         <div class="cards">
+
+          <article class="proj wide">
+            <div class="proj-head">
+              <div>
+                <h3>株式取引の注文受付サーバ</h3>
+                <p class="muted">2026.08 / Finatext サマーインターン（3人チーム）</p>
+              </div>
+            </div>
+            <p class="project-summary">
+              決済サーバ・市場発注サーバ・注文ファイルサーバが用意された環境に対し、注文受付サーバと注文情報DBをAWS上に構築する課題。
+              単発注文、注文履歴取得、一括注文（決済確認をまとめて行いCSVをS3へアップロード）の3つのAPIを実装し、
+              実行基盤をTerraformでコード化しました。
+            </p>
+            <ul class="tags">
+              <li>Go</li>
+              <li>Terraform</li>
+              <li>ECS Fargate</li>
+              <li>Aurora Serverless v2</li>
+              <li>ALB</li>
+              <li>Cognito</li>
+              <li>GitHub Actions</li>
+              <li>ADR</li>
+            </ul>
+            <div class="detail-grid">
+              <div class="detail-block">
+                <span class="detail-label">技術選定</span>
+                <p>
+                  5案を比較したうえでECS Fargateを採用しました。短期開発で管理コストを抑えたいこと、
+                  既に用意されたターゲットグループがip型でありawsvpcを前提としていること、常時アクセスがあることが判断材料です。
+                  DBは決済と発注の整合性を素直に書けるRDBを前提に、スパイク型の負荷に合わせてAurora MySQL Serverless v2を選びました。
+                </p>
+              </div>
+              <div class="detail-block">
+                <span class="detail-label">スパイク対策</span>
+                <p>
+                  市場が開く9:00の集中に対し、メトリクスを検知してからのスケールでは起動とヘルスチェックが間に合いません。
+                  8:45にタスク数の下限を引き上げ、9:30に戻すスケジュール制御を入れ、
+                  想定を超えた分だけCPU使用率の追従スケーリングで拾う二段構えにしました。
+                </p>
+              </div>
+              <div class="detail-block">
+                <span class="detail-label">デプロイの自動化</span>
+                <p>
+                  長期のアクセスキーをリポジトリに置かないため、GitHub ActionsのOIDCトークンを
+                  AssumeRoleWithWebIdentityで交換する構成にしました。信頼ポリシーのsubはワイルドカードにせず完全一致で絞り、
+                  任意のブランチやforkからのワークフローがデプロイ用ロールを引き受けられない状態にしています。
+                </p>
+              </div>
+              <div class="detail-block">
+                <span class="detail-label">認証</span>
+                <p>
+                  user_idをリクエストで受け取る実装では、他人の名義での注文や履歴閲覧が可能でした。
+                  Cognito Hosted UI（認可コード + PKCE）を導入し、アプリ側でJWKSを用いてアクセストークンを検証する構成へ変更しました。
+                </p>
+              </div>
+            </div>
+            <div class="github-note">
+              <strong>この開発で意識したこと</strong>
+              <p>選択肢を並べ、採用理由と却下理由を言語化してADRに残すこと。手順書に頼らず、環境をコードとパイプラインで再現できる状態にすること。</p>
+            </div>
+          </article>
+
+          <article class="proj wide">
+            <div class="proj-head">
+              <div>
+                <h3>Agent Write Gateway</h3>
+                <p class="muted">2026.08 - 現在 / 個人開発（OSS・Apache-2.0）</p>
+              </div>
+            </div>
+            <p class="project-summary">
+              人・CI・CLI・AIエージェントのいずれから来た変更要求も、同じ決定論的な安全境界を通して
+              計画、認可、実行、検証、停止、監査するための Change Execution Control Plane です。
+              現在はプロトタイプ段階で、外部への書き込みは行わないモックアダプタを用いて、安全性の性質そのものを検証しながら設計を固めています。
+            </p>
+            <ul class="tags">
+              <li>Go</li>
+              <li>Temporal</li>
+              <li>PostgreSQL</li>
+              <li>OPA</li>
+              <li>OIDC</li>
+              <li>REST</li>
+              <li>Docker Compose</li>
+              <li>ADR</li>
+            </ul>
+            <div class="detail-grid">
+              <div class="detail-block">
+                <span class="detail-label">課題設定</span>
+                <p>
+                  AIエージェントに書き込み権限を渡すと、任意のシェルや任意のHTTPを叩ける状態になりがちです。
+                  エージェントに渡すのは署名され範囲を絞られた実行許可だけにし、
+                  本物の資格情報は顧客環境から出さない構成を目指しています。
+                </p>
+              </div>
+              <div class="detail-block">
+                <span class="detail-label">安全側に倒す設計</span>
+                <p>
+                  未知の参照、未知のスキーマバージョン、想定外の権限はすべて拒否側に倒します。
+                  Contract・Profile・Planを正規化してハッシュ化し、承認をそのハッシュに紐づけることで、
+                  承認後に中身が差し替わった状態では実行できないようにしました。
+                </p>
+              </div>
+              <div class="detail-block">
+                <span class="detail-label">実行の耐久性</span>
+                <p>
+                  Temporalでワークフロー履歴を永続化し、一時停止・再開・キャンセル・リトライ・復旧を扱えるようにしています。
+                  監査ログはoutboxと同一トランザクションで書き込み、実行の冪等性はDBの制約側で担保しています。
+                </p>
+              </div>
+              <div class="detail-block">
+                <span class="detail-label">責務の分割</span>
+                <p>
+                  Control PlaneとRunnerを分離し、Runnerは署名済みの実行許可のみを受け取ります。
+                  受け取った側でもポリシーを再評価し、短命な資格情報を取得して型付きアダプタを呼ぶ構成にしており、
+                  任意のコマンド実行や汎用のクラウドAPIは意図的に公開していません。
+                </p>
+              </div>
+            </div>
+            <div class="github-note">
+              <strong>GitHubで見てほしい点</strong>
+              <p>
+                <code>internal/grant</code>、<code>internal/runner</code>、<code>internal/policy</code> を見てほしいです。
+                署名検証、ポリシー再評価、nonceジャーナル、資格情報の取得、アダプタ呼び出しを、この順序でしか通れないよう実装しています。
+                設計判断は <code>docs/adr</code> に6本、脅威モデルは <code>docs/security</code> に残しています。
+              </p>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/yingtian0/AgentWriteGateway" target="_blank" rel="noopener noreferrer">GitHub repo</a>
+            </div>
+          </article>
 
           <article class="proj">
             <div class="proj-head">
@@ -469,9 +767,11 @@
             <h3>Backend</h3>
             <ul class="bullets">
               <li>Go（REST / gRPC / WebSocket / Clean Architecture）</li>
+              <li>Ruby on Rails（マルチテナントSaaSのチーム開発）</li>
               <li>OpenAPI / Protocol Buffers を用いたAPI設計</li>
               <li>Redisを用いた状態管理、Pub/Sub、Streams設計</li>
               <li>データベース設計、ORMを用いた機能実装</li>
+              <li>大量データを扱うバッチ処理の設計・実装</li>
               <li>DDDを意識したentity設計、責務分離、ADR作成</li>
               <li>Pythonによる補助ツール・API開発</li>
             </ul>
@@ -480,8 +780,11 @@
           <div class="panel">
             <h3>Infrastructure / Performance</h3>
             <ul class="bullets">
-              <li>AWS </li>
-              <li>Linux / Git / CI/CD</li>
+              <li>AWS（ECS Fargate / Aurora Serverless v2 / ALB / S3 / Cognito / SSM）</li>
+              <li>TerraformによるIaC（コンピュート、DB、IAM、ログ、オートスケーリング）</li>
+              <li>GitHub Actions によるCI/CD（OIDC認証、ECRへのpushとECSデプロイ）</li>
+              <li>Application Auto Scaling を用いたスパイク対策</li>
+              <li>Docker / Linux / Git</li>
               <li>API負荷試験、メトリクス計測、性能チューニング</li>
               <li>Nginx / mitmproxy</li>
             </ul>

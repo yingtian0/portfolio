@@ -455,6 +455,21 @@ h1 .sub{
   filter:drop-shadow(0 18px 32px rgba(225, 179, 83, 0.18));
 }
 
+/* 注力プロジェクトは2カラムをまたいで全幅で見せる */
+.proj.wide{
+  grid-column: 1 / -1;
+}
+
+/* 全幅カードで4ブロック目が1枠だけ余るため、残り列いっぱいに広げて余白をなくす */
+.proj.wide .detail-grid > .detail-block:last-child:nth-child(4){
+  grid-column: span 2;
+}
+
+/* 半分幅のカード内で3カラムに割ると1行あたりの文字数が足りないため、縦積みにする */
+.proj:not(.wide) .detail-grid{
+  grid-template-columns: 1fr;
+}
+
 .github-note strong{
   display:block;
   margin-bottom:8px;
