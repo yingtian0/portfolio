@@ -488,67 +488,6 @@
           <article class="proj wide">
             <div class="proj-head">
               <div>
-                <h3>株式取引の注文受付サーバ</h3>
-                <p class="muted">2026.08 / Finatext サマーインターン（3人チーム）</p>
-              </div>
-            </div>
-            <p class="project-summary">
-              決済サーバ・市場発注サーバ・注文ファイルサーバが用意された環境に対し、注文受付サーバと注文情報DBをAWS上に構築する課題。
-              単発注文、注文履歴取得、一括注文（決済確認をまとめて行いCSVをS3へアップロード）の3つのAPIを実装し、
-              実行基盤をTerraformでコード化しました。
-            </p>
-            <ul class="tags">
-              <li>Go</li>
-              <li>Terraform</li>
-              <li>ECS Fargate</li>
-              <li>Aurora Serverless v2</li>
-              <li>ALB</li>
-              <li>Cognito</li>
-              <li>GitHub Actions</li>
-              <li>ADR</li>
-            </ul>
-            <div class="detail-grid">
-              <div class="detail-block">
-                <span class="detail-label">技術選定</span>
-                <p>
-                  5案を比較したうえでECS Fargateを採用しました。短期開発で管理コストを抑えたいこと、
-                  既に用意されたターゲットグループがip型でありawsvpcを前提としていること、常時アクセスがあることが判断材料です。
-                  DBは決済と発注の整合性を素直に書けるRDBを前提に、スパイク型の負荷に合わせてAurora MySQL Serverless v2を選びました。
-                </p>
-              </div>
-              <div class="detail-block">
-                <span class="detail-label">スパイク対策</span>
-                <p>
-                  市場が開く9:00の集中に対し、メトリクスを検知してからのスケールでは起動とヘルスチェックが間に合いません。
-                  8:45にタスク数の下限を引き上げ、9:30に戻すスケジュール制御を入れ、
-                  想定を超えた分だけCPU使用率の追従スケーリングで拾う二段構えにしました。
-                </p>
-              </div>
-              <div class="detail-block">
-                <span class="detail-label">デプロイの自動化</span>
-                <p>
-                  長期のアクセスキーをリポジトリに置かないため、GitHub ActionsのOIDCトークンを
-                  AssumeRoleWithWebIdentityで交換する構成にしました。信頼ポリシーのsubはワイルドカードにせず完全一致で絞り、
-                  任意のブランチやforkからのワークフローがデプロイ用ロールを引き受けられない状態にしています。
-                </p>
-              </div>
-              <div class="detail-block">
-                <span class="detail-label">認証</span>
-                <p>
-                  user_idをリクエストで受け取る実装では、他人の名義での注文や履歴閲覧が可能でした。
-                  Cognito Hosted UI（認可コード + PKCE）を導入し、アプリ側でJWKSを用いてアクセストークンを検証する構成へ変更しました。
-                </p>
-              </div>
-            </div>
-            <div class="github-note">
-              <strong>この開発で意識したこと</strong>
-              <p>選択肢を並べ、採用理由と却下理由を言語化してADRに残すこと。手順書に頼らず、環境をコードとパイプラインで再現できる状態にすること。</p>
-            </div>
-          </article>
-
-          <article class="proj wide">
-            <div class="proj-head">
-              <div>
                 <h3>Agent Write Gateway</h3>
                 <p class="muted">2026.08 - 現在 / 個人開発（OSS・Apache-2.0）</p>
               </div>

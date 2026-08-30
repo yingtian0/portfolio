@@ -320,6 +320,8 @@ h1 .sub{
 }
 .cards{
   grid-template-columns: 1fr 1fr;
+  /* 内容量の違うカードが行の高さに引き伸ばされて余白が出るのを防ぐ */
+  align-items: start;
 }
 .highlight-grid{
   grid-template-columns: repeat(3, 1fr);
