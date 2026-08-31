@@ -81,10 +81,10 @@ a{ color:inherit; text-decoration:none; }
 
 h1{
   margin:0 0 34px;
-  font-size:clamp(42px,7.4vw,78px);
+  font-size:clamp(27px,4.4vw,52px);
   font-weight:300;
-  letter-spacing:-.035em;
-  line-height:1.1;
+  letter-spacing:-.025em;
+  line-height:1.45;
 }
 
 .lead{
@@ -262,6 +262,8 @@ h1{
   .nav{ gap:18px; font-size:11px; }
 
   .hero{ padding:96px 0 84px; }
+  /* 狭い画面では強制改行を外し、自然に折り返させる */
+  h1 br{ display:none; }
   .section{ padding:76px 0; }
   .section h2{ margin-bottom:40px; }
 
