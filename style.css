@@ -129,6 +129,16 @@ a{ color:inherit; text-decoration:none; }
 }
 .hero-id .eyebrow{ margin:0; }
 
+.eyebrow-link{
+  border-bottom:1px solid transparent;
+  padding-bottom:2px;
+  transition:color .15s, border-color .15s;
+}
+.eyebrow-link:hover{
+  color:var(--accent-soft);
+  border-bottom-color:var(--accent);
+}
+
 .avatar{
   display:block;
   width:44px;
