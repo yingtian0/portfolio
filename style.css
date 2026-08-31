@@ -222,6 +222,51 @@ h1{
   padding:4px 11px;
 }
 
+/* ---------- tech icons ---------- */
+
+.sprite{ position:absolute; }
+
+.tech{
+  list-style:none;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:0;
+  padding:0;
+}
+
+.tech li{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-family:var(--mono);
+  font-size:11px;
+  color:var(--muted);
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:6px 12px 6px 10px;
+  transition:color .15s, border-color .15s;
+}
+.tech li:hover{
+  color:var(--text);
+  border-color:#3d3d41;
+}
+
+.ico{
+  width:14px;
+  height:14px;
+  flex:none;
+  fill:currentColor;
+  opacity:.92;
+}
+.ico.stroke{
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
 /* ---------- stack ---------- */
 
 .stack-grid{
