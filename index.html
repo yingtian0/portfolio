@@ -37,13 +37,16 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top">Yingtian</a>
-      <nav class="nav">
-        <a href="#awards">受賞</a>
-        <a href="#experience">経歴</a>
-        <a href="#works">制作物</a>
-        <a href="#stack">技術</a>
-        <a href="#contact">連絡先</a>
-      </nav>
+      <div class="header-right">
+        <nav class="nav">
+          <a href="#awards">受賞</a>
+          <a href="#experience">経歴</a>
+          <a href="#works">制作物</a>
+          <a href="#stack">技術</a>
+          <a href="#contact">連絡先</a>
+        </nav>
+        <a class="btn btn-sm" href="mailto:haidouyingtian@gmail.com?subject=%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%92%E6%8B%9D%E8%A6%8B%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F">メールを送る</a>
+      </div>
     </div>
   </header>
 
@@ -63,10 +66,12 @@
           <span class="dot">/</span>
           <span>2028年卒</span>
         </div>
-        <div class="hero-links">
-          <a href="https://github.com/yingtian0" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://qiita.com/yingtian0" target="_blank" rel="noopener noreferrer">Qiita</a>
-          <a href="mailto:haidouyingtian@gmail.com">Email</a>
+        <div class="cta-row">
+          <a class="btn" href="mailto:haidouyingtian@gmail.com?subject=%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%92%E6%8B%9D%E8%A6%8B%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F">メールを送る</a>
+          <div class="hero-links">
+            <a href="https://github.com/yingtian0" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://qiita.com/yingtian0" target="_blank" rel="noopener noreferrer">Qiita</a>
+          </div>
         </div>
       </div>
     </section>
@@ -291,8 +296,12 @@
       <div class="container">
         <p class="eyebrow">連絡先</p>
         <h2>お気軽にどうぞ。</h2>
+        <p class="contact-mail">haidouyingtian@gmail.com</p>
+        <div class="cta-row">
+          <a class="btn" href="mailto:haidouyingtian@gmail.com?subject=%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%92%E6%8B%9D%E8%A6%8B%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F">メールを送る</a>
+          <button class="btn ghost" type="button" data-copy="haidouyingtian@gmail.com">アドレスをコピー</button>
+        </div>
         <div class="hero-links">
-          <a href="mailto:haidouyingtian@gmail.com">haidouyingtian@gmail.com</a>
           <a href="https://github.com/yingtian0" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://qiita.com/yingtian0" target="_blank" rel="noopener noreferrer">Qiita</a>
         </div>
@@ -307,6 +316,33 @@
       <span>Kaito Sakurada</span>
     </div>
   </footer>
+
+  <script>
+    document.querySelectorAll("[data-copy]").forEach(function (el) {
+      el.addEventListener("click", function () {
+        var text = el.dataset.copy;
+        var label = el.textContent;
+        var done = function () {
+          el.textContent = "コピーしました";
+          setTimeout(function () { el.textContent = label; }, 1600);
+        };
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(text).then(done, function () {});
+          return;
+        }
+        // file:// や http:// では Clipboard API が使えないため、選択してコピーする
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand("copy"); done(); } catch (e) {}
+        document.body.removeChild(ta);
+      });
+    });
+  </script>
 
 </body>
 </html>
