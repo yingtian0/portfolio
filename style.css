@@ -442,3 +442,31 @@ h1{
   .btn{ width:100%; }
   .btn.btn-sm{ width:auto; }
 }
+
+/* ---------- work details ---------- */
+
+.work-details{ margin-top:20px; }
+.work-details summary{
+  width:fit-content;
+  color:var(--accent-soft);
+  font-size:13px;
+  line-height:1.8;
+  cursor:pointer;
+}
+.work-details summary:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:4px;
+}
+.work-details-content{
+  margin-top:20px;
+  padding-left:18px;
+  border-left:1px solid var(--line);
+}
+.work-details-content h4{
+  margin:24px 0 8px;
+  font-size:14px;
+  font-weight:500;
+  line-height:1.8;
+}
+.work-details-content h4:first-child{ margin-top:0; }
+.work-details-content p + p{ margin-top:12px; }

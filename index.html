@@ -119,6 +119,27 @@
 
         <div class="rows">
           <article class="row">
+            <div class="row-when">現在</div>
+            <div class="row-body">
+              <h3>Finatext / 長期インターン</h3>
+            </div>
+          </article>
+
+          <article class="row">
+            <div class="row-when">2026.10</div>
+            <div class="row-body">
+              <h3>HRBrain / アイデアソン</h3>
+            </div>
+          </article>
+
+          <article class="row">
+            <div class="row-when">2026.09</div>
+            <div class="row-body">
+              <h3>ラクスル / 3days インターン</h3>
+            </div>
+          </article>
+
+          <article class="row">
             <div class="row-when">2026.08</div>
             <div class="row-body">
               <h3>Finatext / サマーインターン</h3>
@@ -208,11 +229,26 @@
             <div class="row-when">2026.08 —</div>
             <div class="row-body">
               <h3>Themisy</h3>
-              <p>人・CI・AIエージェントからの変更要求を、同じ安全境界で認可・実行・監査するControl Plane。</p>
-              <ul class="tags"><li>Go</li><li>Temporal</li><li>PostgreSQL</li><li>OPA</li></ul>
+              <p>実行権限と検証結果に基づくリリース制御基盤。計画・ポリシー判定・承認・実行から、配置状態と監視結果の確認、ロールバックまでを管理する。</p>
+              <ul class="tags"><li>Go</li><li>Temporal</li><li>PostgreSQL</li><li>OPA</li><li>Ed25519</li><li>GitHub Actions</li><li>Docker</li></ul>
+              <details class="work-details">
+                <summary>担当・実装・検証について</summary>
+                <div class="work-details-content">
+                  <h4>担当したこと</h4>
+                  <p>開発方針と優先順位を決め、Issueごとの変更範囲と完了条件を整理。AI開発支援を活用しながら、実装・テスト・ドキュメント更新・PRのマージまで進めた。</p>
+                  <h4>実行後の状態をリリース判断へ接続</h4>
+                  <p>APIの操作要求の成功だけで判断せず、Runnerが取得した配置状態と監視結果を署名付きで受け取り、元の実行・対象環境・リクエストと照合する仕組みを実装。結果を成功・失敗・情報不足・判定不能に分け、不正な署名の報告は成功扱いにせず停止する。</p>
+                  <h4>権限の分離と失敗時の制御</h4>
+                  <p>変更操作と状態確認の権限を分離し、変更権限の失効後も実行済み処理を検証できる構成にした。監視で失敗した場合のロールバックと再検証、PostgreSQLによる履歴の永続化、完了済み検証の再利用による不要な再実行の防止を整備した。</p>
+                  <h4>検証と現在地</h4>
+                  <p>署名付き通信・PostgreSQL・Temporalを組み合わせたテスト環境で、永続化とロールバック・再検証を確認。データ競合検出を含むテスト、静的解析、ビルド、CIを実施し、検証を標準のリリース処理へ接続した変更をPR #93でマージした。</p>
+                  <p>AWS ECS・Datadogの実サービスによる本番相当の運用検証は未完了。本番向けの認証・委任管理は実装途中で、ポリシー配布、信頼できる外部情報の取り込み、長時間の承認待ちに伴う権限の扱いも今後の開発対象としている。</p>
+                </div>
+              </details>
             </div>
             <div class="row-side">
               <a href="https://github.com/yingtian0/Themisy" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://github.com/yingtian0/Themisy/pull/93" target="_blank" rel="noopener noreferrer">PR #93</a>
             </div>
           </article>
 
